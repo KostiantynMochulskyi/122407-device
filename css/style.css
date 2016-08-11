@@ -1,0 +1,41 @@
+body{
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	line-height: 2em;
+	color: #464646;
+	font-weight: normal;
+	letter-spacing: 0.01em;	
+}
+h1{
+	font-family: "Gilroy", sans-serif;
+	font-size: 47px;
+	line-height: ;
+	color: #000000;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+}
+h2{
+	font-family: "Gilroy", sans-serif;
+	font-size: 47px;
+	line-height: ;
+	color: #000000;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+}
+h3{
+	font-family: "Gilroy", sans-serif;
+	font-size: 18px;
+	line-height: ;
+	color: #000000;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+}
+span.logotype{
+	text-transform: uppercase;
+	font-family: "Gilroy", sans-serif;
+	font-size: 48px;
+	line-height: ;
+	color: #000000;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+}
