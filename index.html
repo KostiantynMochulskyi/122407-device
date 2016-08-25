@@ -12,14 +12,13 @@
 				<span class="catalog-logo-header">device</span>
 				<div class="header-row clearfix">
 					<form class="header-left" action="search" method="get">
-						<label class="search-icon">
-							<input type="search" name="search">
-						</label>
+						<input type="search" id="search" placeholder="Поиск по сайту" name="search" class="search">
+						<label class="search-icon" for="search"></label>
+						<button type="submit" class="search-btn"><span>Найти</span></button>
 					</form>
 					<div class="header-right clearfix">
-						<div class="user-block">
-							<a href="#">Валентин Петухов</a>
-							<a href="#">Выйти</a>
+						<div class="user-block-main">
+							<a href="#">Войти</a>
 						</div>
 						<div class="compare-cart">
 							<a href="#">Сравнить</a>
@@ -28,29 +27,37 @@
 					</div>
 				</div>
 				<nav class="main-nav clearfix">
-					<div class="nav-left">
-						<a href="#">Каталог товаров</a>
-						<ul class="menu" style="display: none;">
-							<li>
-								<a href="#" class="menu-item">Виртуальная реальность</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Моноподы для селфи</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Экшн-камеры</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Фитнесс-браслеты</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Умные часы</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Квадрокоптеры</a>
-							</li>
-						</ul>
-					</div>
+					<ul class="nav-left">
+						<li>
+							<a class="catalog-items"href="#">Каталог товаров</a>
+							<ul class="menu clearfix">
+								<div class="dropdown-col">
+								<li>
+									<a href="#" class="menu-item">Виртуальная реальность</a>
+								</li>
+								<li>
+									<a href="#" class="menu-item">Моноподы для селфи</a>
+								</li>
+								<li>
+									<a href="#" class="menu-item">Экшн-камеры</a>
+								</li>
+								</div>
+								<div class="dropdown-col">
+									<li>
+										<a href="#" class="menu-item">Фитнесс-браслеты</a>
+									</li>
+									<li>
+										<a href="#" class="menu-item">Умные часы</a>
+									</li>
+								</div>
+								<div class="dropdown-col">
+								<li>
+									<a href="#" class="menu-item">Квадрокоптеры</a>
+								</li>
+								</div>
+							</ul>
+						</li>					
+					</ul>
 					<div class="nav-right clearfix">
 						<div class="nav-delivery">
 							<a href="#">Доставка</a>
@@ -63,76 +70,86 @@
 				</nav>
 			</div>
 		</header>
-		<main class="container">
-			<div class="slider">
-				<div class="slider-controls"></div>
+		<main class="">
+			<div class="slider container">
+				<input type="radio" id="btn-1" name="toggle" checked>
+				<input type="radio" id="btn-2" name="toggle">
+				<input type="radio" id="btn-3" name="toggle">
+				<div class="slider-controls">
+					<label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+				</div>
 				<div class="slider-inner">
 					<div class="slider-slides">
-						<div class="first-slide clearfix">
-							<img src="img/slider-1.png" width="" height="" alt="Изображение слайдера1">
-							<div class="slider-description">
-								<span class="slider-number">01</span>
-								<p class="slider-header">Делай селфи,  как Бен Стиллер!</p>
-								<p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-								<a class="slider-btn btn" href="#">подробнее</a>
-								<div class="slider-advantages clearfix">
-									<div class="first-advantages">
-										<span class="big-advantages">8,5 м</span>
-										<span>Длина палки</span>
-									</div>
-									<div class="second-advantages">
-										<span class="big-advantages">5 кг</span>
-										<span>Все палки</span>
-									</div>
-									<div class="third-advantages">
-										<span class="big-advantages">Карбон</span>
-										<span>Материал</span>
-									</div>
-								</div>
-							</div>
-						</div>
 						<div class="first-slide clearfix">
 							<img src="img/slider-1.png" width="384" height="486" alt="Изображение слайдера1">
 							<div class="slider-description">
 								<span class="slider-number">01</span>
-								<p class="slider-header">Делай селфи,  как Бен Стиллер!</p>
+								<p class="slider-header">Делай селфи,<br>как Бен Стиллер!</p>
 								<p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-								<a class="slider-btn btn" href="#">подробнее</a>
+								<div class="slider-btn">
+									<a class="btn" href="#">
+										<span>подробнее</span>
+									</a>
+								</div>
 								<div class="slider-advantages clearfix">
 									<div class="first-advantages">
 										<span class="big-advantages">8,5 м</span>
-										<span>Длина палки</span>
+										<span class="small-advantages" >Длина палки</span>
 									</div>
 									<div class="second-advantages">
 										<span class="big-advantages">5 кг</span>
-										<span>Все палки</span>
+										<span class="small-advantages" >Все палки</span>
 									</div>
 									<div class="third-advantages">
 										<span class="big-advantages">Карбон</span>
-										<span>Материал</span>
+										<span class="small-advantages" >Материал</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="first-slide clearfix">
-							<img src="img/slider-1.png" width="" height="" alt="Изображение слайдера1">
+							<img src="img/slider-2.png" width="384" height="486" alt="Изображение слайдера1">
 							<div class="slider-description">
-								<span class="slider-number">01</span>
-								<p class="slider-header">Делай селфи,  как Бен Стиллер!</p>
-								<p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-								<a class="slider-btn btn" href="#">подробнее</a>
+								<span class="slider-number">02</span>
+								<p class="slider-header">Худеем<br>правильно!</p>
+								<p class="slider-text">Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+								<div class="slider-btn">
+									<a class="btn" href="#">
+										<span>подробнее</span>
+									</a>
+								</div>
 								<div class="slider-advantages clearfix">
 									<div class="first-advantages">
-										<span class="big-advantages">8,5 м</span>
-										<span>Длина палки</span>
+										<span class="big-advantages">48 часов</span>
+										<span class="small-advantages" >Без подзарядки</span>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="first-slide clearfix">
+							<img src="img/slider-3.png" width="" height="" alt="Изображение слайдера1">
+							<div class="slider-description">
+								<span class="slider-number last-number">03</span>
+								<p class="slider-header last-header">Порхает как бабочка,<br>жалит как пчела!</p>
+								<p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен 
+								мощным лазером, замаскированным под стандартную камеру.
+								</p>
+								<div class="slider-btn">
+									<a class="btn" href="#">
+										<span>подробнее</span>
+									</a>
+								</div>
+								<div class="slider-advantages clearfix">
+									<div class="first-advantages">
+										<span class="big-advantages">800 м</span>
+										<span class="small-advantages" >Дальность полета</span>
 									</div>
 									<div class="second-advantages">
-										<span class="big-advantages">5 кг</span>
-										<span>Все палки</span>
-									</div>
-									<div class="third-advantages">
-										<span class="big-advantages">Карбон</span>
-										<span>Материал</span>
+										<span class="big-advantages">50 м</span>
+										<span class="small-advantages" >Радиус поражения</span>
 									</div>
 								</div>
 							</div>
@@ -140,62 +157,77 @@
 					</div>
 				</div>
 			</div>
-			<div class="main-catalog clearfix">
-				<div class="item-block">
-					<div class="block-fon">
-					</div>
-					<a href="#">Виртуальная реальность</a>
+			<div class="main-catalog container clearfix">
+				<div class="item-block" href="#">
+					<a href="#"><span>Виртуальная реальность</span></a>
 				</div>
-				<div class="item-block">
-					<div class="block-fon">
-					</div>
-					<a href="#">Моноподы для селфи</a>
+				<div class="item-block" href="#">
+					<a href="#"><span>Монопады для селфи</span></a>
 				</div>
-				<div class="item-block">
-					<div class="block-fon">
-					</div>
-					<a href="#">Экшн-камеры</a>
+				<div class="item-block" href="#">
+					<a href="#"><span>Экшн-камеры</span></a>
 				</div>
-				<div class="item-block">
-					<div class="block-fon">
-					</div>
-					<a href="#">Фитнес браслеты</a>
+				<div class="item-block" href="#">
+					<a href="#"><span>Фитнесс браслеты</span></a>
 				</div>
-				<div class="item-block">
-					<div class="block-fon">
-					</div>
-					<a href="#">Умные часы</a>
+				<div class="item-block" href="#">
+					<a href="#"><span>Умные часы</span></a>
 				</div>
-				<div class="item-block">
-					<div class="block-fon">
-					</div>
-					<a href="#">Квадрокоптеры</a>
+				<div class="item-block" href="#">
+					<a href="#"><span>Квадрокоптеры</span></a>
 				</div>
 			</div>
 			<div class="main-advantages clearfix">
-				<div class="left-advantages">
-					<ul>
-						<li class="active-btn">Доставка</li>
-						<li class="btn btn-advantages">Гарантия</li>
-						<li class="btn btn-advantages">Кредит</li>
-					</ul>
-				</div>
-				<div class="right-advantages">
-					<div class="text-advanteges">
-						<h2>Доставка</h2>
-							<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-							совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
-							на ваш этаж.</p>
+				<div class="container advantages-relative">
+					<div class="advantages-absolute">
+						<input type="radio" id="delivery" name="advantages-toggle" checked>
+						<input type="radio" id="guarantee" name="advantages-toggle">
+						<input type="radio" id="credit" name="advantages-toggle">
+						<div class="advantages-controls">
+							<div>
+								<label class="btn" for="delivery"><span>Доставка</span></label>
+							</div>
+							<div>
+                    			<label class="btn" for="guarantee"><span>Гарантия</span></label>
+                    		</div>
+                    		<div>
+                    			<label class="btn" for="credit"><span>Кредит</span></label>
+         		           	</div>
+						</div>
+						<div class="advantages-slider">
+							<div class="text-delivery">
+								<h2>Доставка</h2>
+								<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+								совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
+								на ваш этаж.</p>
+							</div>
+							<div class="text-guarantee">
+								<h2>Гарантия</h2>
+								<p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+							</div>
+							<div class="text-credit">
+								<h2>Кредит</h2>
+								<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+							</div>
+						</div>
 					</div>
-					<div class="img-advanteges">
-					</div>
-				</div>
+				</div>			
 			</div>
-			<div class="partners">
+			<div class="partners container clearfix">
 				<div class="partners-logo">
+					<img src="img/logo-1.jpg" width="260" height="100" alt="Логотип партнеров">
+				</div>
+				<div class="partners-logo">
+					<img src="img/logo-2.jpg" width="260" height="100" alt="Логотип партнеров">
+				</div>
+				<div class="partners-logo">
+					<img src="img/logo-3.jpg" width="260" height="100" alt="Логотип партнеров">
+				</div>
+				<div class="partners-logo">
+					<img src="img/logo-4.jpg" width="260" height="100" alt="Логотип партнеров">
 				</div>
 			</div>
-			<div class="main-content">
+			<div class="main-content container clearfix">
 				<section class="about-us">
 					<h2>О нас</h2>
 					<p>Огромный выбор гаджетов не оставит равнодушным гика,
@@ -209,7 +241,11 @@
 							<li>ЖелДорЭкспедиция</li>
 						</ul>
 					</p>
-					<a href="#" class="btn btn-about">Подробнее о нас</a>
+					<div class="about-btn">
+						<a class="btn" href="#">
+							<span>подробнее о нас</span>
+						</a>
+					</div>
 				</section>
 				<section class="contacts">
 					<h2>Контакты</h2>
@@ -217,10 +253,14 @@
 					проверить работоспособность покупки. Всякое бывает.</p>
 					<div class="map">
 						<a href="#">
-							<img src="" alt="">
+							<img src="img/map.jpg" width="560" height="222" alt="Карта">
 						</a>
 					</div>
-					<a href="#" class="btn btn-about">Подробнее о нас</a>
+					<div class="writeus-btn">
+						<a class="btn" href="#">
+							<span>напишите нам</span>
+						</a>
+					</div>
 				</section>
 			</div>
 		</main>
