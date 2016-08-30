@@ -2,23 +2,24 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Монопады для селфи</title>
+		<title>Моноподы для селфи</title>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header class="main-header">
-			<div class="bg-header">
-				<a href="index.html" class="catalog-logo-header">device</a>
+		<header class="main-header catalog-main-header">
+			<div class="bg-header-catalog">
+				<a href="index.html" class="catalog-logo-header logo-header-hover">device</a>
 				<div class="header-row clearfix">
 					<form class="header-left" action="search" method="get">
-						<input type="image" src="#" alt="search">
-						<input type="search" name="search">
+						<input type="search" id="search" placeholder="Поиск по сайту" name="search" class="search">
+						<label class="search-icon" for="search"></label>
+						<button type="submit" class="search-btn"><span>Найти</span></button>
 					</form>
 					<div class="header-right clearfix">
-						<div class="user-block">
+						<div class="user-block-main">
 							<a href="#">Валентин Петухов</a>
-							<a href="#">Выйти</a>
+							<a href="#" class="user-exit">Войти</a>
 						</div>
 						<div class="compare-cart">
 							<a href="#">Сравнить</a>
@@ -27,29 +28,37 @@
 					</div>
 				</div>
 				<nav class="main-nav clearfix">
-					<div class="nav-left">
-						<a href="#">Каталог товаров</a>
-						<ul class="menu" style="display: none;">
-							<li>
-								<a href="#" class="menu-item">Виртуальная реальность</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Моноподы для селфи</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Экшн-камеры</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Фитнесс-браслеты</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Умные часы</a>
-							</li>
-							<li>
-								<a href="#" class="menu-item">Квадрокоптеры</a>
-							</li>
-						</ul>
-					</div>
+					<ul class="nav-left">
+						<li>
+							<a class="catalog-items" href="#">Каталог товаров</a>
+							<div class="menu clearfix">
+								<ul class="dropdown-col">
+									<li>
+										<a href="#" class="menu-item">Виртуальная реальность</a>
+									</li>
+									<li>
+										<a href="#" class="menu-item">Моноподы для селфи</a>
+									</li>
+									<li>
+										<a href="#" class="menu-item">Экшн-камеры</a>
+									</li>
+								</ul>
+								<ul class="dropdown-col">
+									<li>
+										<a href="#" class="menu-item">Фитнесс-браслеты</a>
+									</li>
+									<li>
+										<a href="#" class="menu-item">Умные часы</a>
+									</li>
+								</ul>
+								<ul class="dropdown-col">
+									<li>
+										<a href="#" class="menu-item">Квадрокоптеры</a>
+									</li>
+								</ul>
+							</div>
+						</li>					
+					</ul>
 					<div class="nav-right clearfix">
 						<div class="nav-delivery">
 							<a href="#">Доставка</a>
@@ -65,7 +74,7 @@
 		<main>
 			<div class="container">
 				<header class="header-catalog">
-					<h1>Монопады для селфи</h1>
+					<h1>Моноподы для селфи</h1>
 				</header>		
 				<ul class="breadcrumbs">
 					<li>
@@ -75,95 +84,92 @@
 						<a href="#">Каталог товаров</a>
 					</li>
 					<li>
-						<span>Монопады для селфи</span>
+						<a>Монопады для селфи</a>
 					</li>
 				</ul>
 			</div>
-
-			<div class="catalog-content  clearfix">
-
+			<div class="catalog-content">
 				<div class="line">				
-				<div class="content-header container clearfix">
-					<div class="left-content-header">					
-						<h3>Фильтр:</h3>						
-					</div>					
-					<div class="right-content-header clearfix">							
-						<div class="left-sorting">
-							<h3>Сортировка:</h3>						
-							<div class="price-sorting">
-								<span>По цене</span>
-								<a href="#" class="sorting-link">По типу</a>
-								<a href="#" class="sorting-link">По популярности</a>
+					<div class="content-header container clearfix">
+						<div class="left-content-header">					
+							<h3>Фильтр:</h3>						
+						</div>					
+						<div class="right-content-header clearfix">							
+							<div class="left-sorting">
+								<h3>Сортировка:</h3>						
+								<div class="price-sorting">
+									<a>По цене</a>
+									<a href="#" class="sorting-link">По типу</a>
+									<a href="#" class="sorting-link">По популярности</a>
+								</div>
 							</div>
+							<div class="right-sorting">
+								<a href="#"></a>
+								<a></a>
+							</div>													
 						</div>
-						<div class="right-sorting">
-							<a href="#" class="arrow-up">up</a>
-							<a href="#" class="arrow-down">down</a>
-						</div>													
 					</div>
 				</div>
-				</div>
-				<div class="container">
-				<div class="left-content">
-					<form action="filter" method="get">
-						<section class="filter-cost">
-							<h3>Стоимость</h3>
-						</section>
-						<section class="filter-color">
-							<h3>Цвет</h3>
-							<ul>
-								<li>
-									<label class="color">
-										<input type="checkbox" name="black-color" checked>Черный
-									</label>
-								</li>
-								<li>
-									<label class="color">
-										<input type="checkbox" name="white-color">Белый
-									</label>
-								</li>
-								<li>
-									<label class="color">
-										<input type="checkbox" name="blue-color" checked>Синий
-									</label>
-								</li>
-								<li>
-									<label class="color">
-										<input type="checkbox" name="red-color" checked>Красный
-									</label>
-								</li>
-								<li>
-									<label class="color">
-										<input type="checkbox" name="pink-color">Розовый
-									</label>
-								</li>
-							</ul>
-						</section>
-						<section class="filter-bluetooth">
-							<h3>Bluetooth</h3>
-							<ul>
-								<li>
-									<label class="bluetooth">
-										<input type="radio" name="there-is" checked>Есть
-									</label>
-								</li>
-								<li>
-									<label class="bluetooth">
-										<input type="radio" name="no">Нет
-									</label>
-								</li>
-							</ul>
-						</section>
-						<button type="submit" class="btn-show btn">Показать</button>
-					</form>
-				</div>
-				<div class="right-content">
-					<div class="item-row clearfix">
+				<div class="container clearfix">
+					<div class="left-content">
+						<form action="filter" method="get">
+							<section class="filter-cost">
+								<h3>Стоимость</h3>
+							</section>
+							<section class="filter-color">
+								<h3>Цвет</h3>
+								<ul>
+									<li>
+										<label class="color">
+											<input type="checkbox" name="black-color" checked>Черный
+										</label>
+									</li>
+									<li>
+										<label class="color">
+											<input type="checkbox" name="white-color">Белый
+										</label>
+									</li>
+									<li>
+										<label class="color">
+											<input type="checkbox" name="blue-color" checked>Синий
+										</label>
+									</li>
+									<li>
+										<label class="color">
+											<input type="checkbox" name="red-color" checked>Красный
+										</label>
+									</li>
+									<li>
+										<label class="color">
+											<input type="checkbox" name="pink-color">Розовый
+										</label>
+									</li>
+								</ul>
+							</section>
+							<section class="filter-bluetooth">
+								<h3>Bluetooth</h3>
+								<ul>
+									<li>
+										<label class="bluetooth">
+											<input type="radio" name="on" checked>Есть
+										</label>
+									</li>
+									<li>
+										<label class="bluetooth">
+											<input type="radio" name="off">Нет
+										</label>
+									</li>
+								</ul>
+							</section>
+							<button type="submit" class="btn-show btn">Показать</button>
+						</form>
+					</div>
+					<div class="right-content">
 						<div class="catalog-item">
 							<a href="#">
 								<img src="img/item-1.jpg" width="360" height="380" alt="Изображение товара">
 							</a>
-							<div class="price-block">
+							<div class="price-block clearfix">
 								<a href="#">Любительская селфи-палка</a>
 								<span>500 руб.</span>
 							</div>
@@ -172,18 +178,16 @@
 							<a href="#">
 								<img src="img/item-2.jpg" width="360" height="380" alt="Изображение товара">
 							</a>
-							<div class="price-block">
+							<div class="price-block clearfix">
 								<a href="#">Профессиональная селфи-палка</a>
 								<span>1 500 руб.</span>
 							</div>
 						</div>
-					</div>
-					<div class="item-row clearfix">
 						<div class="catalog-item">
 							<a href="#">
 								<img src="img/item-3.jpg" width="360" height="380" alt="Изображение товара">
 							</a>
-							<div class="price-block">
+							<div class="price-block clearfix">
 								<a href="#">Непотопляемая селфи-палка</a>
 								<span>2 500 руб.</span>
 							</div>
@@ -192,28 +196,27 @@
 							<a href="#">
 								<img src="img/item-1.jpg" width="360" height="380" alt="Изображение товара">
 							</a>
-							<div class="price-block">
+							<div class="price-block clearfix">
 								<a href="#">Селфи-палка "Следуй за мной"</a>
 								<span>4 900 руб.</span>
 							</div>
 						</div>
+						<div class="paginator clearfix">
+							<a href="#" class="back">Назад</a>
+							<ul>
+								<li>
+									<span>1</span>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+							</ul>
+							<a href="#" class="forward">Вперед</a>
+						</div>
 					</div>
-					<div class="paginator clearfix">
-						<a href="#" class="back">Назад</a>
-						<ul>
-							<li>
-								<span>1</span>
-							</li>
-							<li>
-								<a href="#">2</a>
-							</li>
-							<li>
-								<a href="#">3</a>
-							</li>
-						</ul>
-						<a href="#" class="forward">Вперед</a>
-					</div>
-				</div>
 				</div>
 			</div>
 		</main>
