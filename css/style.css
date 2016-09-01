@@ -21,7 +21,7 @@
 }
 
 body{
-	font-family: "open_sanslight", sans-serif;
+	font-family: "open_sanslight", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 24px;
 	color: #464646;
@@ -33,7 +33,7 @@ body{
 .btn{
 	font-size: 18px;
 	color: #000;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	text-transform: uppercase;
 	line-height: 22px;
 	letter-spacing: 0.2em;
@@ -46,7 +46,7 @@ body{
 	font-size: 48px;
 	color: #000;
 	text-decoration: none;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-weight: normal;
 	line-height: 54px;
 	margin-top: 13px;
@@ -185,7 +185,7 @@ body{
 	opacity: 1;
 }
 .main-nav{
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
 	color: #000000;
 	letter-spacing: 0.2em;
@@ -252,7 +252,7 @@ body{
 	right: -140px;
 	padding: 10px 18px 8px 18px;
 	font-size: 15px;
-	font-family: "open_sanslight", sans-serif;
+	font-family: "open_sanslight", Arial, sans-serif;
 	background-color: #ffe27f;
 	border: 2px solid #000;
 	bottom: -10px;
@@ -333,7 +333,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	padding: 0px;
 	margin: 0px;
 	text-transform: none;
-	font-family: "open_sanslight", sans-serif;
+	font-family: "open_sanslight", Arial, sans-serif;
 	font-size: 15px;
 	letter-spacing: 0.01em;
 	margin-bottom: 17px;
@@ -355,7 +355,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 }
 .header-catalog h1{
 	font-size: 47px;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 57px;
 	color: #000;
 	letter-spacing: 0.01em;
@@ -386,7 +386,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	text-decoration: none;
 	color: #000;
 	opacity: 0.3;
-	font-family: "open_sanslight", sans-serif;
+	font-family: "open_sanslight", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 36px;
 	letter-spacing: 0.01em;
@@ -401,12 +401,14 @@ input.search:focus ~ button[type="submit"].search-btn{
 	opacity: 1;
 }
 .breadcrumbs li:first-child::after, .breadcrumbs li:nth-child(2)::after{
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 	right: -20px;
 	top: 16px;
 }
 .breadcrumbs li:first-child::before, .breadcrumbs li:nth-child(2)::before{
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 	right: -20px;
 	top: 19px;
 }
@@ -422,7 +424,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 }
 .catalog-content h3{
 	font-size: 16px;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 20px;
 	letter-spacing: 0.2em;
 	color: #000;
@@ -487,7 +489,6 @@ input.search:focus ~ button[type="submit"].search-btn{
 .price-sorting a{
 	margin-right: 30px;
 	font-size: 14px;
-	font-family: , sans-serif;
 	line-height: 18px;
 	color: #000;
 	text-decoration: none;
@@ -651,7 +652,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 .badge-new span{
 	display: inline-block;
 	font-size: 14px;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	letter-spacing: 0.05em;
 	color: #000;
 	opacity: 0.2;
@@ -667,7 +668,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 }
 .price-block a{
 	width: 260px;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 22px;
 	color: #000;
@@ -681,7 +682,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	opacity: 0.3;
 }
 .price-block span{
-	font-family: "gilroylight", sans-serif;
+	font-family: "gilroylight", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 22px;
 	color: #444444;
@@ -754,7 +755,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	margin-left: auto;
 }
 .range-block span{
-	font-family: "gilroylight", sans-serif;
+	font-family: "gilroylight", Arial, sans-serif;
 	font-size: 14px;
 	color: #000;
 	line-height: 22px;
@@ -811,7 +812,8 @@ input.search:focus ~ button[type="submit"].search-btn{
 	background-color: #000;
 	top: 12px;
 	left: 5px;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 .filter-color .color input[type="checkbox"]:checked + .checkbox-indicator::before{
 	content: "";
@@ -821,7 +823,8 @@ input.search:focus ~ button[type="submit"].search-btn{
 	background-color: #000;
 	top: 11px;
 	left: 8px;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 .filter-bluetooth{
 	margin-bottom: 50px;
@@ -916,7 +919,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	font-size: 0px;
 	width: 760px;
 	text-transform: uppercase;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	color:#000;
 	text-align: center;
 	margin-bottom: 73px;
@@ -1101,7 +1104,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	text-decoration: none;
 	color: #ffe27f;
 	font-size: 48px;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 48px;
 }
 .row-footer2{
@@ -1125,7 +1128,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 }
 .row-footer2 .footer-nav a{
 	text-transform: uppercase;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	display: inline-block;
 	font-size: 18px;
 	letter-spacing: 0.2em;
@@ -1264,7 +1267,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 .slider-number{
 	font-size: 180px;
 	color: #fff;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	position: absolute;
 	line-height: 1.2em;
 	right: 47px;
@@ -1283,7 +1286,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	margin: 0px;
 	font-size: 47px;
 	color: #000;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 1.2em;
 	position: relative;
 	z-index: 2;
@@ -1369,13 +1372,16 @@ input.search:focus ~ button[type="submit"].search-btn{
     opacity: 1;
 }
 #btn-1:checked ~ .slider-inner .slider-slides {
-    transform: translate(0);
+    -webkit-transform: translate(0);
+            transform: translate(0);
 }
 #btn-2:checked ~ .slider-inner .slider-slides {
-    transform: translate(-1160px);
+    -webkit-transform: translate(-1160px);
+            transform: translate(-1160px);
 }
 #btn-3:checked ~ .slider-inner .slider-slides {
-    transform: translate(-2320px);
+    -webkit-transform: translate(-2320px);
+            transform: translate(-2320px);
 }
 .first-advantages{
 	float: left;
@@ -1395,7 +1401,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.01em;
-	font-family: "gilroyextralight", sans-serif;
+	font-family: "gilroyextralight", Arial, sans-serif;
 	color: #000;
 	margin-bottom: 6px;
 }
@@ -1426,7 +1432,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	margin-right: 33px;
 	text-decoration: none;
 	color: #000;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	font-size: 18px;
 	letter-spacing: 0.01em;
 	line-height: 22px;
@@ -1633,7 +1639,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 .advantages-slider h2{
 	font-size: 47px;
 	color: #000;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 1.2em;
 	position: relative;
 	margin: 0px;
@@ -1755,7 +1761,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 .main-content h2{
 	font-size: 47px;
 	color: #000;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 1.2em;
 	margin: 0px;
 	padding-top: 49px;
@@ -1784,7 +1790,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	padding: 0;
 	margin: 0;	
 	font-size: 16px;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 40px;
 	letter-spacing: 0;
 	color: #000;
@@ -1892,7 +1898,8 @@ input.search:focus ~ button[type="submit"].search-btn{
 	width: 2px;
 	height: 32px;
 	background-color: #fff;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 	top: 11px;
 	left: 26px;
 }
@@ -1902,7 +1909,8 @@ input.search:focus ~ button[type="submit"].search-btn{
 	width: 2px;
 	height: 32px;
 	background-color: #fff;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 	top: 11px;
 	left: 26px;
 }
@@ -1930,7 +1938,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	line-height: 18px;
 	letter-spacing: 0;
 	color: #444444;
-	font-family: "open_sanslight", sans-serif;
+	font-family: "open_sanslight", Arial, sans-serif;
 }
 
 .writeus-form label span, .writeus-form div span{
@@ -1940,7 +1948,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	line-height: 18px;
 	letter-spacing: 0;
 	color: #000;
-	font-family: "gilroyextrabold", sans-serif;
+	font-family: "gilroyextrabold", Arial, sans-serif;
 	margin-bottom: 10px;
 }
 .writeus-name{
