@@ -1894,7 +1894,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	height: 222px;
 	margin-bottom: 78px;
 }
-@-webkit-keyframes bounce {
+@-webkit-keyframes bounce{
 	0%	{
 		-webkit-transform: translateY(-2000px);
 		        transform: translateY(-2000px);
@@ -1912,7 +1912,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 		        transform: translateY(0);
 	}
 }
-@keyframes bounce {
+@keyframes bounce{
 	0%	{
 		-webkit-transform: translateY(-2000px);
 		        transform: translateY(-2000px);
@@ -2108,6 +2108,8 @@ input.search:focus ~ button[type="submit"].search-btn{
 }
 .modal-map-show{
 	display: block;
+	-webkit-animation: bounce 0.9s;
+	        animation: bounce 0.9s;
 }
 .modal-overlay{
 	display: none;
