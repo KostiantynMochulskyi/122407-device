@@ -5,11 +5,16 @@
 			var popupmap = document.querySelector(".modal-map");
 			var closemap = popupmap.querySelector(".close-modal");
 			var overlay = document.querySelector(".modal-overlay");
+			var form = popup.querySelector("form");
+			var firstname = popup.querySelector("[name=name]");
+			var mail = popup.querySelector("[name=email]");
+			var text = popup.querySelector("[name=text]");
 
 			writeus.addEventListener("click", function(event){
 				event.preventDefault();
 				overlay.classList.add("modal-overlay-show");
 				popup.classList.add("modal-writeus-show");
+				firstname.focus();
 			});
 			close.addEventListener("click", function(event){
 				event.preventDefault();
@@ -37,4 +42,10 @@
 				event.preventDefault();
 				popupmap.classList.remove("modal-map-show");
 				overlay.classList.remove("modal-overlay-show");
+			});
+			form.addEventListener("submit", function(event){
+				if (!firstname.value || !mail.value || !text.value) {
+					event.preventDefault();
+					console.log("Enter your information");
+				}
 			});
