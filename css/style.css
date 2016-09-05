@@ -785,9 +785,13 @@ input.search:focus ~ button[type="submit"].search-btn{
 	cursor: pointer;
 }
 .price-ball:active{
+	width: 14px;
+	height: 14px;
+	border: none;
 	background-color: #7eae29;
-	border: 3px solid #fff;
-	box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+	box-shadow: 
+		0px 0px 0px 3px white,
+		0px 8px 5px -3px rgba(0,0,0,0.75);
 }
 .range-block:last-child .price-ball{
 	margin-right: auto;
