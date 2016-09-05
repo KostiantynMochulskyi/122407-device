@@ -64,7 +64,7 @@
 							<a href="#">Доставка</a>
 							<a href="#">Гарантия</a>
 						</div>
-						<a class="nav-contacts"href="#">Контакты</a>
+						<a class="nav-contacts" href="#">Контакты</a>
 					</div>
 				</nav>
 			</div>
@@ -128,39 +128,24 @@
 								<h3>Цвет</h3>
 								<ul>
 									<li>
-										<label class="color">
-											<input type="checkbox" name="black-color" checked>
-											<span class="checkbox-indicator"></span>
-											Черный
-										</label>
+										<input type="checkbox" name="black-color" id="black" checked>
+										<label class="color" for="black">Черный</label>
+									</li>
+									<li>									
+										<input type="checkbox" name="white-color" id="white">
+										<label class="color" for="white">Белый</label>										
 									</li>
 									<li>
-										<label class="color">
-											<input type="checkbox" name="white-color">
-											<span class="checkbox-indicator"></span>
-											Белый
-										</label>
+										<input type="checkbox" name="blue-color" id="blue" checked>					
+										<label class="color" for="blue">Синий</label>									
+									</li>
+									<li>									
+										<input type="checkbox" name="red-color" id="red" checked>
+										<label class="color" for="red">Красный</label>
 									</li>
 									<li>
-										<label class="color">
-											<input type="checkbox" name="blue-color" checked>
-											<span class="checkbox-indicator"></span>
-											Синий
-										</label>
-									</li>
-									<li>
-										<label class="color">
-											<input type="checkbox" name="red-color" checked>
-											<span class="checkbox-indicator"></span>
-											Красный
-										</label>
-									</li>
-									<li>
-										<label class="color">
-											<input type="checkbox" name="pink-color">
-											<span class="checkbox-indicator"></span>
-											Розовый
-										</label>
+										<input type="checkbox" name="pink-color" id="pink">
+										<label class="color" for="pink">Розовый</label>
 									</li>
 								</ul>
 							</section>
@@ -168,18 +153,12 @@
 								<h3>Bluetooth</h3>
 								<ul>
 									<li>
-										<label class="bluetooth">
-											<input type="radio" name="check-bluetooth" checked>
-											<span class="radio-indicator"></span>
-											Есть
-										</label>
+										<input type="radio" name="check-bluetooth" checked id="yes-bluetooth">
+										<label class="bluetooth" for="yes-bluetooth">Есть</label>
 									</li>
 									<li>
-										<label class="bluetooth">
-											<input type="radio" name="check-bluetooth">
-											<span class="radio-indicator"></span>
-											Нет
-										</label>
+										<input type="radio" name="check-bluetooth" id="no-bluetooth">
+										<label class="bluetooth" for="no-bluetooth">Нет</label>
 									</li>
 								</ul>
 							</section>
@@ -290,7 +269,7 @@
 		<footer class="main-footer clearfix">
 			<div class="container">
 				<div class="row-footer1 clearfix">
-					<a href="index.html" class="footer-header">device</a>
+					<a href="index.html" class="footer-header footer-header-catalog">device</a>
 					<div class=right-footer-row>
 						<a class="footer-enter" href="#"><span>Войти</span></a>
 						<a class="footer-compare" href="#"><span>Сравнить</span></a>

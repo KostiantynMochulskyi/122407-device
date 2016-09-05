@@ -29,6 +29,7 @@ body{
 	letter-spacing: 0.01em;
 	background: #fff;
 	background-size: 2000px auto;
+	min-width: 1200px;
 }
 .btn{
 	font-size: 18px;
@@ -80,7 +81,8 @@ body{
 	content: "";
 	width: 1160px;
 	height: 299px;
-	background-color: #ffe27f;
+	background-color: #f0c52e;
+	opacity: 0.5;
 	position: absolute;
 	left: 0px;
 	z-index: -1;
@@ -90,7 +92,7 @@ body{
 	content: "";
 	width: 1160px;
 	height: 186px;
-	background-color: #ffe27f;
+	background-color: #f7e296;
 	position: absolute;
 	left: 0px;
 	z-index: -1;
@@ -119,7 +121,7 @@ body{
 }
 .search{
 	border: none;
-	background-color: #ffe27f;
+	background: none;
 	font-size: 15px;
 	opacity: 0.3;
 	padding-left: 40px;
@@ -151,7 +153,7 @@ body{
 	padding: 10px 18px 8px 18px;
 	font-size: 15px;
 	font-family: "open_sanslight", Arial, sans-serif;
-	background-color: #ffe27f;
+	background: none;
 	border: 2px solid #000;
 	bottom: -10px;
 	display: none;
@@ -176,7 +178,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 .search-btn:active{
 	display: block;
 }
-.search-btn:active>span{
+.search-btn:active span{
 	border: none;
 	opacity: 0.3;
 }
@@ -284,22 +286,25 @@ input.search:focus ~ button[type="submit"].search-btn{
 }
 .nav-left{
 	float: left;
-	min-width: 300px;
+	max-width: 300px;
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
 }
 .nav-right{
 	float: right;
-	min-width: 500px;
+	width: 500px;
 }
 .nav-delivery{
 	float: left;
-	min-width: 300px;
+	max-width: 350px;
 	font-size: 0px;
 }
 .nav-contacts{
 	float: right;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 150px;
 }
 .nav-delivery a{
 	display: inline-block;
@@ -326,7 +331,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 .nav-left .menu:after{
 	content: "";
 	position: absolute;
-	background-color: #ffe393;
+	background-color: #f7e296;
 	width: 1160px;
 	height: 129px;
 	left: 0px;
@@ -463,7 +468,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	min-width: 328px;
 	position: relative;
 }
-.left-content-header>h3{
+.left-content-header h3{
 	margin-left: 60px;
 	position: relative;
 	z-index: 5;
@@ -496,7 +501,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	float: right;
 	max-width: 100px;	
 }
-.left-sorting>h3{
+.left-sorting h3{
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 56px;	
@@ -587,14 +592,14 @@ input.search:focus ~ button[type="submit"].search-btn{
 	width: 360px;
 	display: inline-block;
 	vertical-align: top;
-	margin-bottom: 106px;
-	height: 400px;
+	margin-bottom: 26px;
+	min-height: 480px;
 	background-color: white;
 }
 .catalog-item:nth-last-child(2), .catalog-item:nth-last-child(1){
-	margin-bottom: 95px;
+	margin-bottom: 15px;
 }
-.catalog-item:nth-child(2n-1){
+.catalog-item:nth-child(2n+1){
 	margin-right: 39px;
 }
 .image-block{
@@ -628,7 +633,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 8px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: 1;
 	top: 7px;
@@ -638,7 +643,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 42px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	top: -9px;
 	left: 0px;
 }
@@ -659,6 +664,12 @@ input.search:focus ~ button[type="submit"].search-btn{
 	width: 100%;
 	text-align: center;
 	vertical-align: top;
+}
+.link-compare:hover{
+	opacity: 1;
+}
+.link-compare:active{
+	opacity: 0.2;
 }
 .image-block:hover .image-hover{
 	display: block;
@@ -716,6 +727,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 
 .left-content form{
 	margin-left: 60px;
+	max-width: 201px;
 }
 .filter-cost{
 	margin-top: 82px;
@@ -772,6 +784,11 @@ input.search:focus ~ button[type="submit"].search-btn{
 	border: 2px solid #000;
 	cursor: pointer;
 }
+.price-ball:active{
+	background-color: #7eae29;
+	border: 3px solid #fff;
+	box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+}
 .range-block:last-child .price-ball{
 	margin-right: auto;
 	margin-left: auto;
@@ -813,10 +830,10 @@ input.search:focus ~ button[type="submit"].search-btn{
 .filter-color .color{
 	cursor: pointer;
 }
-.color input[type="checkbox"]{
+.filter-color input[type="checkbox"]{
 	display: none;
 }
-.color input[type="checkbox"] + .checkbox-indicator{
+.color::before{
 	content: "";
 	position: absolute;
 	width: 23px;
@@ -826,28 +843,26 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 0px;
 	cursor: pointer;
 }
-.color input[type="checkbox"]:checked + .checkbox-indicator::after{
-	content: "";
-	position: absolute;
-	width: 6px;
-	height: 2px;
-	background-color: #000;
-	top: 12px;
-	left: 5px;
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
+.color:hover::before{
+	background-color: #cecece;
 }
-.color input[type="checkbox"]:checked + .checkbox-indicator::before{
+.color:active::before{
+	background-color: #c4c4c4;
+}
+.filter-color input[type="checkbox"]:checked + .color::after{
 	content: "";
 	position: absolute;
-	width: 10px;
-	height: 2px;
-	background-color: #000;
-	top: 11px;
-	left: 8px;
+	width: 9px;
+	height: 5px;
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	background: none;
+	top: 7px;
+	left: 6px;
 	-webkit-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
 }
+
 .filter-bluetooth{
 	margin-bottom: 48px;
 	position: relative;
@@ -878,10 +893,10 @@ input.search:focus ~ button[type="submit"].search-btn{
 .bluetooth{
 	cursor: pointer;
 }
-.bluetooth input[type="radio"]{
+.filter-bluetooth input[type="radio"]{
 	display: none;
 }
-.bluetooth input[type="radio"] + .radio-indicator{
+.bluetooth::before{
 	content: "";
 	position: absolute;
 	border-radius: 50%;
@@ -893,7 +908,13 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 0px;
 	cursor: pointer;
 }
-.bluetooth input[type="radio"]:checked + .radio-indicator:before{
+.bluetooth:hover::before{
+	border: 2px solid #bcbcbc;
+}
+.bluetooth:active::before{
+	border: 2px solid #acacac;
+}
+.filter-bluetooth input[type="radio"]:checked + .bluetooth::after{
 	content: "";
 	position: absolute;
 	border-radius: 50%;
@@ -901,8 +922,8 @@ input.search:focus ~ button[type="submit"].search-btn{
 	height: 5px;
 	border: 2px solid #000;
 	background: none;
-	top: 5px;
-	left: 5px;
+	top: 7px;
+	left: 7px;
 }
 .btn-show{
 	background: none;
@@ -917,7 +938,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 8px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -1;
 	top: 7px;
@@ -927,12 +948,12 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 42px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -1;
 	top: -9px;
 }
-.btn-show:active>span{
+.btn-show:active span{
 	opacity: 0.3;
 }
 .paginator{
@@ -952,11 +973,12 @@ input.search:focus ~ button[type="submit"].search-btn{
 	font-size: 16px;
 	text-decoration: none;
 }
-.paginator>ul{
+.paginator ul{
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 23px;
 	margin-right: 38px;
+	max-width: 497px;
 }
 .paginator .back{
 	float: left;
@@ -976,15 +998,22 @@ input.search:focus ~ button[type="submit"].search-btn{
 .back:active span, .forward:active span{
 	opacity: 0.3;
 }
-.paginator a{
+.block-pages a{
 	text-decoration: none;
-	color: #bababa;
+	color: #000;
+	opacity: 0.3;
 }
 .paginator li{
 	margin-right: 30px;
 }
 .paginator li:last-child{
 	margin-right: 0px;
+}
+.block-pages a:hover{
+	opacity: 0.6;
+}
+.block-pages a:active{
+	opacity: 1;
 }
 .main-footer{
 	padding-top: 60px;
@@ -1128,13 +1157,13 @@ input.search:focus ~ button[type="submit"].search-btn{
 	float: left;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: #ffe27f;
+	color: #f7e296;
 	font-size: 48px;
 	font-family: "gilroyextrabold", Arial, sans-serif;
 	line-height: 48px;
 }
-.footer-header:hover{
-	color: #ffc600;
+.footer-header-catalog:hover{
+	color: #f0c52e;
 }
 .footer-header:active{
 	opacity: 0.3;
@@ -1152,11 +1181,13 @@ input.search:focus ~ button[type="submit"].search-btn{
 	float: left;
 	font-size: 15px;
 	color: #fff;
+	max-width: 300px;
 }
 .row-footer2 .footer-nav{
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 26px;
+	max-width: 490px;
 }
 .footer-nav a{
 	text-transform: uppercase;
@@ -1173,10 +1204,10 @@ input.search:focus ~ button[type="submit"].search-btn{
 .footer-nav a:active{
 	opacity: 0.3;
 }
-.footer-nav a:first-child{
+.footer-nav a:nth-child(3n+1){
 	margin-right: 34px;
 }
-.footer-nav a:nth-child(2){
+.footer-nav a:nth-child(3n+2){
 	margin-right: 44px;
 }
 .footer-phone{
@@ -1184,6 +1215,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	font-size: 15px;
 	color: #fff;
 	letter-spacing: 0;
+	max-width: 180px;
 }
 .row-footer3{
 	font-size: 0px;
@@ -1204,7 +1236,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	position: absolute;
 	width: 80px;
 	height: 7px;
-	background-color: #ffe27f;
+	background-color: #f7e296;
 	left: 0px;
 	top: 16px;
 }
@@ -1214,30 +1246,6 @@ input.search:focus ~ button[type="submit"].search-btn{
 	width: 39px;
     height: 38px;
     vertical-align: top;
-}
-.footer-social a:last-child{
-	margin-right: 0px;
-}
-.fb-btn{
-	background: transparent url("../img/spritesheet.png") no-repeat;
-	background-position: -131px -5px;
-	opacity: 0.3;
-}
-.footer-social .inst-btn{
-	background: transparent url("../img/spritesheet.png") no-repeat;
-	background-position: -254px -5px;
-	opacity: 0.3;
-}
-.tw-btn{
-	background: transparent url("../img/spritesheet.png") no-repeat;
-	background-position: -986px -5px;
-	opacity: 0.3;
-}
-.footer-social a:hover{
-	opacity: 1;
-}
-.footer-social a:active{
-	opacity: 0.1;
 }
 .footer-developers a{
 	margin-top: 2px;
@@ -1257,10 +1265,34 @@ input.search:focus ~ button[type="submit"].search-btn{
 	background-position: -217px -5px;
 	opacity: 0.3;
 }
+.fb-btn{
+	background: transparent url("../img/spritesheet.png") no-repeat;
+	background-position: -131px -5px;
+	opacity: 0.3;
+}
+.footer-social .inst-btn{
+	background: transparent url("../img/spritesheet.png") no-repeat;
+	background-position: -254px -5px;
+	opacity: 0.3;
+}
+.tw-btn{
+	background: transparent url("../img/spritesheet.png") no-repeat;
+	background-position: -986px -5px;
+	opacity: 0.3;
+}
+.footer-social a:last-child{
+	margin-right: 0px;
+}
+.footer-social a:hover{
+	opacity: 1;
+}
+.footer-social a:active{
+	opacity: 0.1;
+}
 .first-slide{
 	position: relative;
 }
-.first-slide>img{
+.first-slide img{
 	float: left;
 	padding-left: 90px;
 	padding-right: 26px;
@@ -1281,7 +1313,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	position: relative;
 	padding-right: 79px;
 }
-.first-slide:last-child>img{
+.first-slide:last-child img{
 	float: left;
 	padding-left: 31px;
 	padding-right: 3px;
@@ -1289,7 +1321,6 @@ input.search:focus ~ button[type="submit"].search-btn{
 	height: 334px;
 	margin-top: 65px;
 }
-
 .first-slide:last-child .slider-description{
 	float: right;
 	padding-left: 40px;
@@ -1297,7 +1328,6 @@ input.search:focus ~ button[type="submit"].search-btn{
 	position: relative;
 	padding-right: 49px;
 }
-
 .slider-number{
 	font-size: 180px;
 	color: #fff;
@@ -1346,26 +1376,26 @@ input.search:focus ~ button[type="submit"].search-btn{
 	padding-left: 43px;
 	padding-right: 43px;
 }
-.slider-btn>a::before{
+.slider-btn a::before{
 	position: absolute;
 	content: "";
 	height: 8px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -2;
 	top: 7px;
 }
-.slider-btn:hover>a::before{
+.slider-btn:hover a::before{
 	position: absolute;
 	content: "";
 	height: 42px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	top: -9px;
 	left: 0px;
 }
-.slider-btn:active>a {
+.slider-btn:active a {
 	opacity: 0.3;
 }
 .slider {
@@ -1452,16 +1482,16 @@ input.search:focus ~ button[type="submit"].search-btn{
 .item-block:last-child{
 	margin-right: 0px;
 }
-.item-block>a::before{
+.item-block a::before{
 	content: "";
 	position: absolute;
-	background-color: #ffe27f;
+	background-color: #f7e296;
 	width: 160px;
 	height: 160px;
 	top: 0;
 	left: 0;
 }
-.item-block>a{
+.item-block a{
 	display: inline-block;
 	margin-top: 194px;
 	margin-right: 33px;
@@ -1479,7 +1509,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	max-width: 160px;
 	word-wrap: break-word;
 }
-.item-block:first-child>a::after{
+.item-block:first-child a::after{
 	position: absolute;
 	content: "";
 	width: 97px;
@@ -1489,7 +1519,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 31px;
 	background-position: -471px -5px;
 }
-.item-block:nth-child(2)>a::after{
+.item-block:nth-child(2) a::after{
 	position: absolute;
 	content: "";
 	width: 86px;
@@ -1499,7 +1529,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 38px;
 	background-position: -578px -5px;
 }
-.item-block:nth-child(3)>a::after{
+.item-block:nth-child(3) a::after{
 	position: absolute;
 	content: "";
 	width: 71px;
@@ -1509,7 +1539,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 49px;
 	background-position: -674px -5px;
 }
-.item-block:nth-child(4)>a::after{
+.item-block:nth-child(4) a::after{
 	position: absolute;
 	content: "";
 	width: 107px;
@@ -1519,7 +1549,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 28px;
 	background-position: -755px -5px;
 }
-.item-block:nth-child(5)>a::after{
+.item-block:nth-child(5) a::after{
 	position: absolute;
 	content: "";
 	width: 56px;
@@ -1529,7 +1559,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 55px;
 	background-position: -872px -5px;
 }
-.item-block:nth-child(6)>a::after{
+.item-block:nth-child(6) a::after{
 	position: absolute;
 	content: "";
 	width: 132px;
@@ -1539,10 +1569,10 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 13px;
 	background-position: -329px -5px;
 }
-.item-block:hover>a::before{
-	background-color: #ffc600;
+.item-block:hover a::before{
+	background-color: #f0c52e;
 }
-.item-block:active>a::after, .item-block:active span{
+.item-block:active a::after, .item-block:active span{
 	opacity: 0.3;
 }
 .main-catalog{
@@ -1571,10 +1601,10 @@ input.search:focus ~ button[type="submit"].search-btn{
 .advantages-controls label{
 	cursor: pointer;
 }
-.advantages-controls>div{
+.advantages-controls div{
 	margin-bottom: 41px;
 }
-.advantages-controls>div:first-child{
+.advantages-controls div:first-child{
 	margin-top: 19px;
 }
 .advantages-slider{
@@ -1593,7 +1623,9 @@ input.search:focus ~ button[type="submit"].search-btn{
 #delivery:checked ~ .advantages-slider .text-delivery{
 	display: inline-block;
 	vertical-align: top;
-}
+}/*"здесь нет необходимости указывать вложенность в .advantages-slider, все работает и без этого",
+если убрать .advantages-slider не работает, так как #delivery:checked и .text-delivery не имеют общего родителя,
+а у #delivery:checked и .advantages-slider .text-delivery есть общий родителя*/
 #guarantee:checked ~ .advantages-slider .text-guarantee{
 	display: inline-block;
 	vertical-align: top;
@@ -1602,40 +1634,17 @@ input.search:focus ~ button[type="submit"].search-btn{
 	display: inline-block;
 	vertical-align: top;
 }
-#delivery:hover ~ .advantages-controls>div:first-child .btn::before{
+#delivery:hover ~ .advantages-controls .delivery-check::before{
 	position: absolute;
 	content: "";
 	height: 40px;
-	width: 100%;
-	background-color: #ffc600;
+	width: 160px;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -1;
 	top: -8px;
 }
-#delivery:checked ~ .advantages-controls>div:first-child .btn::before{
-	position: absolute;
-	content: "";
-	height: 40px;
-	width: 285px;
-	background-color: #000;
-	left: 0;
-	z-index: -1;
-	top: -8px;
-}
-#delivery:checked ~ .advantages-controls>div:first-child .btn{
-	color: #ffe27f;
-}
-#guarantee:hover ~ .advantages-controls>div:nth-child(2) .btn::before{
-	position: absolute;
-	content: "";
-	height: 40px;
-	width: 100%;
-	background-color: #ffc600;
-	left: 0;
-	z-index: -1;
-	top: -8px;
-}
-#guarantee:checked ~ .advantages-controls>div:nth-child(2) .btn::before{
+#delivery:checked ~ .advantages-controls .delivery-check::before{
 	position: absolute;
 	content: "";
 	height: 40px;
@@ -1645,20 +1654,20 @@ input.search:focus ~ button[type="submit"].search-btn{
 	z-index: -1;
 	top: -8px;
 }
-#guarantee:checked ~ .advantages-controls>div:nth-child(2) .btn{
-	color: #ffe27f;
+#delivery:checked ~ .advantages-controls .delivery-check{
+	color: #f7e296;
 }
-#credit:hover ~ .advantages-controls>div:last-child .btn::before{
+#guarantee:hover ~ .advantages-controls .guarantee-check::before{
 	position: absolute;
 	content: "";
 	height: 40px;
-	width: 100%;
-	background-color: #ffc600;
+	width: 160px;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -1;
 	top: -8px;
 }
-#credit:checked ~ .advantages-controls>div:last-child .btn::before{
+#guarantee:checked ~ .advantages-controls .guarantee-check::before{
 	position: absolute;
 	content: "";
 	height: 40px;
@@ -1668,8 +1677,31 @@ input.search:focus ~ button[type="submit"].search-btn{
 	z-index: -1;
 	top: -8px;
 }
-#credit:checked ~ .advantages-controls>div:last-child .btn{
-	color: #ffe27f;
+#guarantee:checked ~ .advantages-controls .guarantee-check{
+	color: #f7e296;
+}
+#credit:hover ~ .advantages-controls .credit-check::before{
+	position: absolute;
+	content: "";
+	height: 40px;
+	width: 160px;
+	background-color: #f0c52e;
+	left: 0;
+	z-index: -1;
+	top: -8px;
+}
+#credit:checked ~ .advantages-controls .credit-check::before{
+	position: absolute;
+	content: "";
+	height: 40px;
+	width: 285px;
+	background-color: #000;
+	left: 0;
+	z-index: -1;
+	top: -8px;
+}
+#credit:checked ~ .advantages-controls .credit-check{
+	color: #f7e296;
 }
 .advantages-slider p{
 	padding-right: 325px;
@@ -1721,20 +1753,20 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 8px;
 	width: 160px;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -1;
 	top: 7px;
 }
-.advantages-controls>div:first-child span{
+.delivery-check span{
 	padding-left: 23px;
 	padding-right: 23px;
 }
-.advantages-controls>div:nth-child(2) span{
+.guarantee-check span{
 	padding-left: 29px;
 	padding-right: 29px;
 }
-.advantages-controls>div:last-child span{
+.credit-check span{
 	padding-left: 43px;
 	padding-right: 43px;
 }
@@ -1864,26 +1896,26 @@ input.search:focus ~ button[type="submit"].search-btn{
 	padding-left: 41px;
 	padding-right: 41px;
 }
-.about-btn>a::before, .writeus-btn>a::before{
+.about-btn a::before, .writeus-btn a::before{
 	position: absolute;
 	content: "";
 	height: 8px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: -2;
 	top: 7px;
 }
-.about-btn:hover>a::before, .writeus-btn:hover>a::before{
+.about-btn:hover a::before, .writeus-btn:hover a::before{
 	position: absolute;
 	content: "";
 	height: 42px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	top: -9px;
 	left: 0px;
 }
-.about-btn:active>a, .writeus-btn:active>a {
+.about-btn:active a, .writeus-btn:active a {
 	opacity: 0.3;
 }
 .contacts p{
@@ -1962,7 +1994,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	right: 23px;
 	width: 54px;
 	height: 54px;
-	background-color: #ffe27f;
+	background-color: #f7e296;
 	border: 0;
 	border-radius: 50%;
 	outline: 0;
@@ -1991,11 +2023,11 @@ input.search:focus ~ button[type="submit"].search-btn{
 	left: 26px;
 }
 .map-close{
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	opacity: 0.5;
 }
 .close-modal:hover{
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	opacity: 1;
 }
 .close-modal:active::before, .close-modal:active::after{
@@ -2015,7 +2047,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	color: #444444;
 	font-family: "open_sanslight", Arial, sans-serif;
 }
-.writeus-form span{
+.writeus-namemail span, .writeus-text span{
 	display: inline-block;
 	vertical-align: top;
 	font-size: 18px;
@@ -2038,19 +2070,19 @@ input.search:focus ~ button[type="submit"].search-btn{
 	height: 50px;
 }
 .writeus-namemail{
-	margin-bottom: 37px;
+	margin-bottom: 36px;
 }
 .writeus-form textarea{
 	width: 730px;
 	height: 141px;
 	padding-top: 15px;
-	padding-right: 10px;
+	padding-right: 15px;
 }
 .writeus-name{
 	margin-right: 40px;
 }
 .writeus-form button{
-	margin-top: 43px;
+	margin-top: 45px;
 	border: none;
 	background: none;
 	cursor: pointer;
@@ -2067,7 +2099,7 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 8px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	left: 0;
 	z-index: 1;
 	top: 7px;
@@ -2077,15 +2109,15 @@ input.search:focus ~ button[type="submit"].search-btn{
 	content: "";
 	height: 42px;
 	width: 100%;
-	background-color: #ffc600;
+	background-color: #f0c52e;
 	top: -9px;
 	left: 0px;
 }
-.writeus-send>span{
+.writeus-send span{
 	position: relative;
 	z-index: 300;
 }
-.writeus-send:active>span{
+.writeus-send:active span{
 	opacity: 0.3;
 }
 .modal-writeus-show{
